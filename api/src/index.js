@@ -8,11 +8,7 @@ app.use(express.raw({ type: 'application/vnd.custom-type' }));
 app.use(express.text({ type: 'text/html' }));
 
 app.get('/todos', async (req, res) => {
-	const todos = await prisma.todo.findMany({
-		orderBy: { createdAt: 'desc' },
-	});
-
-	res.json(todos);
+	return 'howdy';
 });
 
 app.listen(port, () => {
