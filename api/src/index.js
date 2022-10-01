@@ -1,16 +1,13 @@
-import express from 'express';
-
+"use strict";
+const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-
 app.use(express.json());
-app.use(express.raw({ type: 'application/vnd.custom-type' }));
 app.use(express.text({ type: 'text/html' }));
-
-app.get('/todos', async (req, res) => {
-	return 'howdy';
+app.get('/', async ({ req, res }) => {
+    console.log(req);
+    res.send('howdy');
 });
-
 app.listen(port, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${port}`);
 });
