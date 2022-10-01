@@ -173,3 +173,5 @@ sketch
 
 /node_modules/
 */build/*
+
+.idea
