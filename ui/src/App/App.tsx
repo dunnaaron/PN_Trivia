@@ -13,7 +13,7 @@ function App() {
 			<AppContainer className="App">
 				<Logo src="/logo-large.png" className="App-logo" alt="logo" />
 				<ButtonContainer>
-					<ButtonExample variant="contained">Example MUI Button</ButtonExample>
+					<ButtonExample variant="contained">Button</ButtonExample>
 				</ButtonContainer>
 			</AppContainer>
 		</ThemeProvider>
