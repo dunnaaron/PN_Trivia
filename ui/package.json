@@ -16,7 +16,9 @@
 		"@types/node": "^16.11.62",
 		"@types/react": "^18.0.21",
 		"@types/react-dom": "^18.0.6",
+		"chart.js": "^4.0.1",
 		"react": "^18.2.0",
+		"react-chartjs-2": "^5.0.1",
 		"react-dom": "^18.2.0",
 		"react-scripts": "5.0.1",
 		"serve": "^14.0.1",
@@ -25,6 +27,7 @@
 		"web-vitals": "^2.1.4"
 	},
 	"devDependencies": {
+		"@types/chart.js": "^2.9.37",
 		"yarn-audit-fix": "^9.3.6"
 	},
 	"scripts": {

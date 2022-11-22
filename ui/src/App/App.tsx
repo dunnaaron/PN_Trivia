@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@mui/material/styles';
+import PieChart from '../PieChart/PieChart';
 import theme from '../theme';
 import {
 	AppContainer,
@@ -12,6 +13,7 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<AppContainer className="App">
 				<Logo src="/logo-large.png" className="App-logo" alt="logo" />
+				<PieChart />
 				<ButtonContainer>
 					<ButtonExample variant="contained">Button</ButtonExample>
 				</ButtonContainer>
