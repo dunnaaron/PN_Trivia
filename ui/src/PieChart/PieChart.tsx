@@ -1,15 +1,17 @@
 import {
-	Chart,
-	BubbleDataPoint,
-	ChartData,
-	ScatterDataPoint,
 	ArcElement,
+	BubbleDataPoint,
+	Chart,
+	ChartData,
+	Legend,
+	ScatterDataPoint,
+	Tooltip,
 } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { PieChartContainer } from './PieChart.styled';
 
-// This line is required to get the chart to render, don't ask me why
-Chart.register(ArcElement);
+// This line is required to get the chart to render https://react-chartjs-2.js.org/faq/registered-element
+Chart.register(ArcElement, Tooltip, Legend);
 
 const fakeData: ChartData<
 	'pie',
@@ -31,21 +33,31 @@ const fakeData: ChartData<
 	],
 };
 
-const PieChart = () => (
-	<PieChartContainer>
-		<Pie
-			data={fakeData}
-			fallbackContent="Pie Chart"
-			options={{
-				plugins: {
-					title: {
-						display: true,
-						text: 'Users Gained between 2016-2020',
+interface IPieChart {
+	displayLabels: boolean;
+}
+
+const PieChart = ({ displayLabels }: IPieChart) => {
+	return (
+		<PieChartContainer>
+			<Pie
+				data={fakeData}
+				fallbackContent="Pie Chart"
+				options={{
+					plugins: {
+						title: {
+							display: true,
+							text: 'Example pie chart',
+						},
+						legend: {
+							display: displayLabels,
+						},
 					},
-				},
-			}}
-		/>
-	</PieChartContainer>
-);
+					radius: '95%',
+				}}
+			/>
+		</PieChartContainer>
+	);
+};
 
 export default PieChart;

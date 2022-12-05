@@ -4,7 +4,6 @@ import { styled } from '@mui/system';
 export const PieChartContainer = styled(Container)({
 	display: 'flex',
 	justifyContent: 'center',
-	height: 200,
-	width: 200,
-	padding: '20px',
+	height: 500,
+	width: 500,
 });
